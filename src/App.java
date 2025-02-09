@@ -3,5 +3,6 @@ public class App {
         System.out.println("Please insert your Coordinates");
         Grid grid = new Grid(10);
         grid.printGrid();
+        grid.getUserMove();
     }
 }

@@ -16,10 +16,10 @@ public class Bomb {
 
         while (bombAmount > 0) {
             int row = random.nextInt(size);
-            int col = random.nextInt(size);
+            int column = random.nextInt(size);
 
-            if (grid[row][col].equals(" ")) {
-                grid[row][col] = "X";
+            if (grid[row][column].equals(" ")) {
+                grid[row][column] = "X";
                 bombAmount--;
             }
         }
