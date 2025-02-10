@@ -8,6 +8,7 @@ public class Bomb {
         this.size = size;
         this.grid = grid;
         generateBombs();
+        calculateNumbers();
     }
 
     public void generateBombs() {
@@ -24,4 +25,30 @@ public class Bomb {
             }
         }
     }
+
+    public void calculateNumbers() {
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                if (grid[row][col].equals("X")) {
+                    continue;
+                }
+
+                int adjacentBombs = 0;
+                for (int r = row - 1; r <= row + 1; r++) {
+                    for (int c = col - 1; c <= col + 1; c++) {
+                        if (r >= 0 && r < size && c >= 0 && c < size && grid[r][c].equals("X")) {
+                            adjacentBombs++;
+                        }
+                    }
+                }
+
+                if (adjacentBombs > 0) {
+                    grid[row][col] = String.valueOf(adjacentBombs);
+                } else {
+                    grid[row][col] = "0";
+                }
+            }
+        }
+    }
+
 }
