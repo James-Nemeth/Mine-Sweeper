@@ -1,18 +1,28 @@
-## Getting Started
+# Project: Minesweeper
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## MVP
 
-## Folder Structure
+- Recreate a simplified version of the game Minesweeper to be played in the java console
+- The game should be able to randomly generate 10 mines in a 10x10 grid
+- The user will be able to enter a command that represents a coordinate to check a location for a mine
+- The application will display a number from 0-8 depending on how many mines surround that location
+- If the user selects a mine, the game will respond "boom!" and the game will be lost
+- If every non-mine square has been revealed, the game is won
+- Render the grid to the console after every user command
 
-The workspace contains two folders by default, where:
+## Bonuses (optional)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Allow for the user to configure number of mines and grid size.
+(Difficult) Discovering an empty square should reveal all squares around it, and cascade into other nearby empty squares
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```java
+[0] [1] [ ]
+[ ] [1] [ ]
+```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```java
+   1   2
+  +---+---+
+1 | 1 | 2 |
+  +---+---+
+```

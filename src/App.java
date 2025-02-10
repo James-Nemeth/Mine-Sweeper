@@ -5,7 +5,10 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to Minesweeper!");
 
-        Grid grid = new Grid(10);
+        System.out.println("Please enter a grid size number (4 - 10)");
+        int gridSize = scanner.nextInt();
+
+        Grid grid = new Grid(gridSize);
 
         while (!grid.isGameOver()) {
             grid.printGrid();
