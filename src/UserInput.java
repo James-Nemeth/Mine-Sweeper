@@ -22,18 +22,21 @@ public class UserInput {
 
         System.out.print("Enter column (0 to " + (size - 1) + "): ");
         col = scanner.nextInt();
-        if (row >= 0 && row < size && col >= 0 && col < size) {
-            if (revealed[row][col]) {
-                System.out.println("Spot already revealed. Try again.");
-            } else {
-                revealCell(row, col);
 
-                if (grid[row][col].equals("0")) {
-                    revealAdjacentCells(row, col);
-                }
-            }
-        } else {
+        if (row < 0 || row >= size || col < 0 || col >= size) {
             System.out.println("Invalid coordinates. Please enter numbers between 0 and " + (size - 1) + ".");
+            return;
+        }
+
+        if (revealed[row][col]) {
+            System.out.println("Spot already revealed. Try again.");
+            return;
+        }
+
+        revealCell(row, col);
+
+        if (grid[row][col].equals("0")) {
+            revealAdjacentCells(row, col);
         }
     }
 

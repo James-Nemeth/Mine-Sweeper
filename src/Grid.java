@@ -62,7 +62,7 @@ public class Grid {
             for (int j = 0; j < size; j++) {
                 if (!revealed[i][j] && !isBomb(i, j)) {
                     allRevealed = false;
-                    break;
+                    return;
                 }
             }
         }
