@@ -5,6 +5,9 @@ public class Grid {
     private Bomb bomb;
     private UserInput userInput;
     private boolean gameOver;
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
 
     public Grid(int size) {
         this.size = size;
@@ -36,13 +39,9 @@ public class Grid {
             System.out.print(" " + i + " ");
             for (int j = 0; j < size; j++) {
                 if (!revealed[i][j]) {
-                    System.out.print("{   } ");
-                } else if (grid[i][j].equals("+")) {
-                    System.out.print("{ + } ");
-                } else if (grid[i][j].equals("X")) {
-                    System.out.print("{ X } ");
+                    System.out.print(ANSI_GREEN + "{   } " + ANSI_RESET);
                 } else {
-                    System.out.print("{ " + grid[i][j] + " } ");
+                    System.out.print(ANSI_YELLOW + "{ " + grid[i][j] + " } " + ANSI_RESET);
                 }
             }
             System.out.println();
