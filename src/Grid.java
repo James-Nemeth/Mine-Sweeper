@@ -26,7 +26,14 @@ public class Grid {
     }
 
     public void printGrid() {
+        System.out.print("   ");
+        for (int j = 0; j < size; j++) {
+            System.out.print("  " + j + "   ");
+        }
+        System.out.println();
+
         for (int i = 0; i < size; i++) {
+            System.out.print(" " + i + " ");
             for (int j = 0; j < size; j++) {
                 if (!revealed[i][j]) {
                     System.out.print("{   } ");
