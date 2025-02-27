@@ -5,7 +5,7 @@
 1. Clone the repository
 
 ```bash
-https://github.com/James-Nemeth/Mine-Sweeper.git
+git@github.com:James-Nemeth/Mine-Sweeper.git
 cd Mine-Sweeper/src
 ```
 
