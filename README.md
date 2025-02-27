@@ -1,5 +1,31 @@
 # Project: Minesweeper
 
+## Build Steps
+
+1. Clone the repository
+
+```bash
+https://github.com/James-Nemeth/Mine-Sweeper.git
+cd Mine-Sweeper/src
+```
+
+2. Compile the game
+
+```bash
+javac App.java
+```
+
+3. Run the game
+
+```bash
+java App
+```
+
+- You will then prompted to choose a grid size (recommeded to do it from 4 - 10).
+- Can then Input row and column coordinates to play Minesweepers.
+- Game can be reset at the end if you lose or win.
+
+
 ## MVP
 
 - Recreate a simplified version of the game Minesweeper to be played in the java console
@@ -28,31 +54,6 @@
 
 - **Programming Language:** Java
 - **Development Environment:** VSCode
-
-## Build Steps
-
-1. Clone the repository
-
-```bash
-https://github.com/James-Nemeth/Mine-Sweeper.git
-cd Mine-Sweeper/src
-```
-
-2. Compile the game
-
-```bash
-javac App.java
-```
-
-3. Run the game
-
-```bash
-java App
-```
-
-- You will then prompted to choose a grid size (recommeded to do it from 4 - 10).
-- Can then Input row and column coordinates to play Minesweepers.
-- Game can be reset at the end if you lose or win.
 
 ## Purpose of project:
 
