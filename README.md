@@ -24,16 +24,29 @@
   +---+---+
 ```
 
-Instructions:
+### Stacks Used
 
-- In the terminal:
-- Compile the code
-```java
+- **Programming Language:** Java
+- **Development Environment:** VSCode
+
+## Build Steps
+
+1. Clone the repository
+
+```bash
+https://github.com/James-Nemeth/Mine-Sweeper.git
+cd Mine-Sweeper/src
+```
+
+2. Compile the game
+
+```bash
 javac App.java
 ```
 
-- Run the code
-```java
+3. Run the game
+
+```bash
 java App
 ```
 
